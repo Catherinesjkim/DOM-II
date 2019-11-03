@@ -55,6 +55,9 @@
         <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p> 
         <p>Expedition colorful design simple excursion blogger blogger design WordPress design, design organized website theme.</p>
       </div>
+      <div class="img-content">
+        <img data-leaving="leave" src="img/adventure.jpg" alt="Let's go on an adventure!">
+      </div>
      
     </section>
     <section class="content-destination">
@@ -80,6 +83,43 @@
         <div class="btn">Sign Me Up!</div>
       </div>
     </section>
+    <form class="form" action="btn" method="post">
+      <fieldset>
+        <legend>Select a Package</legend>
+
+        <div>
+          <input type="radio" id="sun" name="package" value="sun" checked />
+          <label for="sun">Fun In The Sun</label>
+        </div>
+
+        <div>
+          <input type="radio" id="mountain" name="package" value="mountain" />
+          <label for="mountain">Mountain Excursion</label>
+        </div>
+
+        <div>
+          <input type="radio" id="island" name="package" value="island" />
+          <label for="island">Island Getaway</label>
+        </div>
+
+      </fieldset>
+      <label for="name">
+        <span>Enter Your Name</span><input id="nameForm" type="text" name="name" required="true" focus="false"/>
+      </label>
+      <label for="email">
+        <span>Email Address</span><input id="emailForm" type="email" name="email" required="true" />
+      </label>
+      <label for="phone">
+        <span>Phone Number</span><input id="phoneForm" type="text" name="phone" required="true" />
+      </label>
+      <label for="special">
+        <span>Special Instructions</span><textarea id="specialForm" name="special" onkeyup="adjust_textarea(this)" required="true"></textarea>
+      </label>
+      <label>
+        <span>&nbsp;</span><input type="submit" value="Submit" />
+      </label>
+    </form>
+    </form>
   </div><!-- container -->
 
   <footer class="footer">

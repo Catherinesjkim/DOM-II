@@ -20,6 +20,7 @@ nav.addEventListener('click', (event) => {
 
 const signUpButton1 = document.querySelector(".btn");
 const signUpButton1Div = document.querySelector(".destination");
+
 // ADDED CONSOLE LOG FOR WHEN FUN IN THE SUN DIV IS CLICKED
 signUpButton1Div.addEventListener("click", (event) => {
   console.log("div-clicked"); // Will only show on the inspect console 
@@ -41,7 +42,6 @@ setTimeout(function () {
   header.style.opacity = "";
 }, 200);
 false;
-// WORKING
 
 //ALERTS OUCH WHENEVER THE WINDOW IS RESIZED
 window.addEventListener('resize', () => {
@@ -71,13 +71,13 @@ false;
 window.addEventListener("load", function(event) {
   alert("All resources finished loading! Ready for some FUN? Try scrolling the page, try hovering over the nav logo heading, try double clicking the nav links, try dragging the `Fun Bus` banner image, try pressing a key on your keyboard...but wait...where did the nav bar go?...that's ok, just hover over anywhere inside it to bring it back! Focus the name field in the form to see its background color change and leave its focus, aka blur event, to remove the background color. Try re-sizing the window and see what happens. Click on the `Fun In the Sun packages` div and look in the console to see that you clicked it...do the same with the Sign Me Up button inside that div and notice that it console.logs its own message without console.logging that the div was clicked...that's the power of the stopPropagation method...that's it!");
 });
-// WORKING
 
 const sunPackage = document.querySelector("#sun");
 const mountainPackage = document.querySelector("#mountain");
 const islandPackage = document.querySelector("#island");
 const radios = document.querySelector("#fieldset"); 
-// Not sure if I need the above.
+
+// TRY MAKING SOME EVENTS USING querySelectorAll and using forEach to iterate over the nodelist that it gives me. 
 
 // const contPick = Object.values(siteContent.contentPick)
 // const destBtn = document.querySelectorAll('btn');
@@ -91,7 +91,7 @@ const nameInput = document.querySelector("#nameForm");
 const emailForm = document.querySelector("#emailForm");
 const phoneForm = document.querySelector("#phoneForm");
 const specialInstructionsForm = document.querySelector("#specialForm");
-// Not sure if it's working
+
 
 // ADDS A BACKGROUND COLOR THE NAME INPUT WHEN IT IS FOCUSED
 nameInput.addEventListener("focus", (event) => {
@@ -101,6 +101,4 @@ nameInput.addEventListener("focus", (event) => {
 nameInput.addEventListener('blue', (event) => {
   nameInput.style.backgroundColor = "inherit"
 });
-// NOT SURE IF IT'S WORKING 
 
-// TRY MAKING SOME EVENTS USING querySelectorAll and using forEach to iterate over the nodelist that it gives me. 
