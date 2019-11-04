@@ -1,5 +1,9 @@
 // Your code goes here
-const navLogo = document.addEventListener("mouseover", (event) => event.target.style.color = "purple");
+const navLogo = document.querySelector("body");
+navLogo.addEventListener("mouseover", (event) => {
+  event.target.style.color = "purple";
+  navLogo.style.transition = "all 10s";
+});
 
 // reset the color after a short delay
 setTimeout(function () {
@@ -92,11 +96,11 @@ const phoneForm = document.querySelector("#phoneForm");
 const specialInstructionsForm = document.querySelector("#specialForm");
 
 // ADDS A BACKGROUND COLOR THE NAME INPUT WHEN IT IS FOCUSED
-nameInput.addEventListener("focus", () => {
+nameInput.addEventListener("focus", (event) => {
   nameInput.style.backgroundColor = "orangered"
 });
 // REMOVES THE BACKGROUND COLOR ON THE NAME INPUT WHEN FOCUS IS LEFT...I.E. ON BLUR EVENT
-nameInput.addEventListener('blue', () => {
+nameInput.addEventListener('blue', (event) => {
   nameInput.style.backgroundColor = "inherit"
 });
 
