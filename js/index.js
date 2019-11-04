@@ -1,5 +1,6 @@
 // Your code goes here
 const navLogo = document.addEventListener("mouseover", (event) => event.target.style.color = "purple");
+
 // reset the color after a short delay
 setTimeout(function () {
   event.target.style.color = "";
@@ -58,9 +59,11 @@ body.addEventListener('wheel', function alertMeOnce() {
   body.removeEventListener('wheel', alertMeOnce);
 });
 
-const funBusBanner = document.querySelector(".intro > img" );
+const funBusPhotos = document.querySelectorAll("img" );
 // DRAG THE FUN-BUS INTRO IMAGE TO SCALE IT 150% IN SIZE 
-funBusBanner.addEventListener('drag', (event) => event.target.style.transform = 'scale(1.5)');
+funBusPhotos.forEach(image => {
+  image.addEventListener('drag', (event) => event.target.style.transform = 'scale(1.5)');
+});
 
 setTimeout(function (event) {
   event.target.style.transform = "";
@@ -75,13 +78,9 @@ window.addEventListener("load", function(event) {
 const sunPackage = document.querySelector("#sun");
 const mountainPackage = document.querySelector("#mountain");
 const islandPackage = document.querySelector("#island");
+
+
 const radios = document.querySelector("#fieldset"); 
-
-// TRY MAKING SOME EVENTS USING querySelectorAll and using forEach to iterate over the nodelist that it gives me. 
-
-// const contPick = Object.values(siteContent.contentPick)
-// const destBtn = document.querySelectorAll('btn');
-// destBtn.forEach((item, index) => item.innerText = contPick[index])
 
 // radios.addEventListener('select', radios.style.backgroundColor = "red");
 radios.addEventListener("select", (event) => {
@@ -92,13 +91,12 @@ const emailForm = document.querySelector("#emailForm");
 const phoneForm = document.querySelector("#phoneForm");
 const specialInstructionsForm = document.querySelector("#specialForm");
 
-
 // ADDS A BACKGROUND COLOR THE NAME INPUT WHEN IT IS FOCUSED
-nameInput.addEventListener("focus", (event) => {
+nameInput.addEventListener("focus", () => {
   nameInput.style.backgroundColor = "orangered"
 });
 // REMOVES THE BACKGROUND COLOR ON THE NAME INPUT WHEN FOCUS IS LEFT...I.E. ON BLUR EVENT
-nameInput.addEventListener('blue', (event) => {
+nameInput.addEventListener('blue', () => {
   nameInput.style.backgroundColor = "inherit"
 });
 
