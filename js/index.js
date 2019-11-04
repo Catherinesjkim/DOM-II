@@ -2,7 +2,7 @@
 const navLogo = document.querySelector("body");
 navLogo.addEventListener("mouseover", (event) => {
   event.target.style.color = "purple";
-  navLogo.style.transition = "all 10s";
+  navLogo.style.transition = "all 20s";
 });
 
 // reset the color after a short delay
@@ -43,19 +43,15 @@ const header = document.querySelector('header');
 // PRESS A KEYBOARD KEY AND THE HEADER WILL DISAPPEAR FROM VISION
 body.addEventListener("keydown", (event) => header.style.opacity = "0");
 
-setTimeout(function () {
-  header.style.opacity = "";
-}, 200);
-false;
+const navContainer = document.querySelector(".nav-container");
+// MOUSEENTER THE NAVIGATION TO RETURN ITS OPACITY TO 1 TO NEGATE THE ABOVE KEYPRESS OPACITY CHANGE
+navContainer.addEventListener("mouseenter", () => header.style.opacity = "1");
+
 
 //ALERTS OUCH WHENEVER THE WINDOW IS RESIZED
 window.addEventListener('resize', () => {
   alert('OUCH!')
 });
-
-const navContainer = document.querySelector(".nav-container");
-// MOUSEENTER THE NAVIGATION TO RETURN ITS OPACITY TO 1 TO NEGATE THE ABOVE KEYPRESS OPACITY CHANGE
-navContainer.addEventListener("mouseenter", () => header.style.opacity = "1");
 
 // ADDS AN ALERT WHEN THE USER FIRST `SCROLLS` WITH THE MOUSE WHEEL BUT THEN REMOVES THAT EVENT SO THEY CAN ACTUALLY NAVIGATE THE SITE
 body.addEventListener('wheel', function alertMeOnce() {
@@ -67,6 +63,8 @@ const funBusPhotos = document.querySelectorAll("img" );
 // DRAG THE FUN-BUS INTRO IMAGE TO SCALE IT 150% IN SIZE 
 funBusPhotos.forEach(image => {
   image.addEventListener('drag', (event) => event.target.style.transform = 'scale(1.5)');
+  image.addEventListener("mouseleave", () => event.target.style.transform = '');
+  image.addEventListener("mouseleave", () => event.target.style.transition = 'all 2s');
 });
 
 setTimeout(function (event) {
@@ -95,11 +93,11 @@ const emailForm = document.querySelector("#emailForm");
 const phoneForm = document.querySelector("#phoneForm");
 const specialInstructionsForm = document.querySelector("#specialForm");
 
-// ADDS A BACKGROUND COLOR THE NAME INPUT WHEN IT IS FOCUSED
+// ADDS A BACKGROUND COLOR TO THE INPUTS WHEN IT IS FOCUSED
 nameInput.addEventListener("focus", (event) => {
   nameInput.style.backgroundColor = "orangered"
 });
-// REMOVES THE BACKGROUND COLOR ON THE NAME INPUT WHEN FOCUS IS LEFT...I.E. ON BLUR EVENT
+// REMOVES THE BACKGROUND COLOR ON THE INPUT WHEN FOCUS IS LEFT...I.E. ON BLUR EVENT
 nameInput.addEventListener('blue', (event) => {
   nameInput.style.backgroundColor = "inherit"
 });
